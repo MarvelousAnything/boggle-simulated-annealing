@@ -1,43 +1,56 @@
-dimensions = (4, 4)
+from boggle_board import BoggleBoard
+from vector import Vector
+from words import Words
 
 
-def boggle_checker_helper(board, target, row, col, used) -> bool:
-    if (row, col) in used:
-        return False
-    if board[row][col] != target[0]:
-        return False
-    if len(target) == 1:
-        return True
-    used = used.union({(row, col)})
-    neighbors = find_neighbors(board, row, col)
-    print(target, row, col)
-    for i, j in neighbors:
-        if boggle_checker_helper(board, target[1:], i, j, used):
-            return True
-    return False
-
-
-def boggle_checker(board, target):
-    for row in range(len(board)):
-        for col in range(len(board[row])):
-            if boggle_checker_helper(board, target, row, col, set()):
-                return True
-    return False
-
-
-def find_neighbors(board, row, col):
-    neighbor_offsets = [(-1, -1), (-1, 0), (-1, 1),
-                        (0, -1), (0, 1),
-                        (1, -1), (1, 0), (1, 1)]
-    neighbors = [(row + offset[0], col + offset[1]) for offset in neighbor_offsets if not (
-                (row + offset[0] in dimensions or row + offset[0] == -1) or (
-                    col + offset[1] in dimensions or col + offset[1] == -1))]
-    return neighbors
+def score(word):
+    length = len(word)
+    if length < 3:
+        return 0
+    if length <= 4:
+        return 1
+    if length == 5:
+        return 2
+    if length == 6:
+        return 3
+    if length == 7:
+        return 4
+    if length >= 8:
+        return 11
 
 
 if __name__ == "__main__":
-    board = ["aaaa",
-             "aaaa",
-             "aaaa",
-             "aaaa"]
-    print(boggle_checker(board, 17*"a"))
+    # board = BoggleBoard([
+    #     ["a", "s", "r", "d", "i"],
+    #     ["n", "r", "l", "o", "n"],
+    #     ["i", "i", "s", "a", "y"],
+    #     ["p", "n", "c", "i", "i"],
+    #     ["r", "g", "l", "n", "r"]])
+    board = BoggleBoard.rand_board(Vector(4, 4))
+    total_score = 0
+    word_count = 0
+    print(board)
+    print("----------------------------------\n")
+    used_words = []
+    letter_frequencies = dict()
+    total_words = len(Words.words)
+    for index, word in enumerate(Words.words):
+        if len(word) < 3:
+            pass
+        elif word in board:
+            total_score += score(word)
+            word_count += 1
+            used_words.append(word)
+            print(f"{index+1}/{total_words} - {word}", word_count, total_score)
+
+    for word in used_words:
+        for letter in word:
+            if letter in letter_frequencies:
+                letter_frequencies[letter] += 1
+            else:
+                letter_frequencies[letter] = 1
+    print(board)
+    print("--------------------------")
+    print(total_score, word_count, total_score / word_count)
+    for i in letter_frequencies.keys():
+        print(str(i) + ": " + str(letter_frequencies[i]))
