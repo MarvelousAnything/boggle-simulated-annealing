@@ -151,3 +151,14 @@ class Vector(object):
 
     def __repr__(self):
         return str(self.values)
+
+    def __eq__(self, other):
+        if len(other) != len(self):
+            return False
+        for s, i in zip(self.values, other.values):
+            if s != i:
+                return False
+        return True
+
+    def __hash__(self):
+        return self.values.__hash__()

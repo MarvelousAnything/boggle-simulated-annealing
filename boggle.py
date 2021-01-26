@@ -1,56 +1,59 @@
+import time
+
 from boggle_board import BoggleBoard
 from vector import Vector
-from words import Words
+import threading
+
+count = 0
+
+results = dict()
+
+remaining_tests = 50
 
 
-def score(word):
-    length = len(word)
-    if length < 3:
-        return 0
-    if length <= 4:
-        return 1
-    if length == 5:
-        return 2
-    if length == 6:
-        return 3
-    if length == 7:
-        return 4
-    if length >= 8:
-        return 11
+def get_scores():
+    global results, count, remaining_tests
+
+    while remaining_tests > 0:
+        remaining_tests -= 1
+        count += 1
+        local_count = count
+        print(f"Started game {count} on thread: {threading.current_thread()}\n")
+        board, data = BoggleBoard.rand_board(Vector(4, 4)).get_score()
+        results[board] = data
+        print(f"Finished game {local_count} on thread: {threading.current_thread()}\n")
+
+
+def do_simulations(n):
+    threads = []
+    for _ in range(n):
+        x = threading.Thread(target=get_scores)
+        x.start()
+        threads.append(x)
+
+    for t in threads:
+        t.join()
+
+
+def sum_frequency(a, b):
+    out = a.copy()
+    for letter in b:
+        if letter in out:
+            out[letter] += b[letter]
+        else:
+            out[letter] = b[letter]
+    return out
 
 
 if __name__ == "__main__":
-    # board = BoggleBoard([
-    #     ["a", "s", "r", "d", "i"],
-    #     ["n", "r", "l", "o", "n"],
-    #     ["i", "i", "s", "a", "y"],
-    #     ["p", "n", "c", "i", "i"],
-    #     ["r", "g", "l", "n", "r"]])
-    board = BoggleBoard.rand_board(Vector(4, 4))
-    total_score = 0
-    word_count = 0
-    print(board)
-    print("----------------------------------\n")
-    used_words = []
-    letter_frequencies = dict()
-    total_words = len(Words.words)
-    for index, word in enumerate(Words.words):
-        if len(word) < 3:
-            pass
-        elif word in board:
-            total_score += score(word)
-            word_count += 1
-            used_words.append(word)
-            print(f"{index+1}/{total_words} - {word}", word_count, total_score)
+    p1 = BoggleBoard.rand_board(Vector(4, 4))
+    p2 = BoggleBoard.rand_board(Vector(4, 4))
+    print(p1)
+    print(p2)
+    r1 = p1.get_score()
+    r2 = p2.get_score()
 
-    for word in used_words:
-        for letter in word:
-            if letter in letter_frequencies:
-                letter_frequencies[letter] += 1
-            else:
-                letter_frequencies[letter] = 1
-    print(board)
-    print("--------------------------")
-    print(total_score, word_count, total_score / word_count)
-    for i in letter_frequencies.keys():
-        print(str(i) + ": " + str(letter_frequencies[i]))
+    print(r1)
+    print(r2)
+    child = BoggleBoard.create_child(p1, p2, sum_frequency(r1[2], r2[2]))
+    print(child)

@@ -10,3 +10,13 @@ class Words(object):
             else:
                 letter_frequencies[j] = 1.0
     alphabet = list(letter_frequencies.keys())
+
+    @staticmethod
+    def get_frequency(word):
+        out = dict()
+        for i in word:
+            if i in out:
+                out[i] += 1
+            else:
+                out[i] = 1
+        return out
