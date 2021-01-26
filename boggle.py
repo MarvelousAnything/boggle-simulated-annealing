@@ -1,59 +1,160 @@
-import time
+from random import Random
+from typing import List, Set
 
-from boggle_board import BoggleBoard
 from vector import Vector
-import threading
-
-count = 0
-
-results = dict()
-
-remaining_tests = 50
+from words import Words
 
 
-def get_scores():
-    global results, count, remaining_tests
-
-    while remaining_tests > 0:
-        remaining_tests -= 1
-        count += 1
-        local_count = count
-        print(f"Started game {count} on thread: {threading.current_thread()}\n")
-        board, data = BoggleBoard.rand_board(Vector(4, 4)).get_score()
-        results[board] = data
-        print(f"Finished game {local_count} on thread: {threading.current_thread()}\n")
-
-
-def do_simulations(n):
-    threads = []
-    for _ in range(n):
-        x = threading.Thread(target=get_scores)
-        x.start()
-        threads.append(x)
-
-    for t in threads:
-        t.join()
+def word_score(word):
+    length = len(word)
+    if length < 3:
+        return 0
+    if length <= 4:
+        return 1
+    if length == 5:
+        return 2
+    if length == 6:
+        return 3
+    if length == 7:
+        return 4
+    if length >= 8:
+        return 11
 
 
-def sum_frequency(a, b):
-    out = a.copy()
-    for letter in b:
-        if letter in out:
-            out[letter] += b[letter]
-        else:
-            out[letter] = b[letter]
-    return out
+class BoggleBoard:
+    def __init__(self, board: List[List[str]], generation=0) -> None:
+        self.board = board
+        self.dimensions = Vector(len(board[0]), len(board))
+        self.letter_frequency = dict()
+        for i in self.board:
+            for j in i:
+                if j in self.letter_frequency:
+                    self.letter_frequency[j] += 1
+                else:
+                    self.letter_frequency[j] = 1
+        self.generation = generation
 
+    @staticmethod
+    def rand_board(dims: Vector):
+        board = []
+        for col in range(dims.values[0]):
+            board.append(
+                Random().choices(Words.alphabet, weights=list(Words.letter_frequencies.values()), k=dims.values[1]))
+        return BoggleBoard(board)
 
-if __name__ == "__main__":
-    p1 = BoggleBoard.rand_board(Vector(4, 4))
-    p2 = BoggleBoard.rand_board(Vector(4, 4))
-    print(p1)
-    print(p2)
-    r1 = p1.get_score()
-    r2 = p2.get_score()
+    def in_bounds(self, point: Vector) -> bool:
+        return not any([p >= d or p <= -1 for (p, d) in list(zip(point.values, self.dimensions.values))])
 
-    print(r1)
-    print(r2)
-    child = BoggleBoard.create_child(p1, p2, sum_frequency(r1[2], r2[2]))
-    print(child)
+    def find_neighbors(self, pos: Vector) -> List[Vector]:
+        neighbor_offsets = [Vector(-1, -1), Vector(-1, 0), Vector(-1, 1),
+                            Vector(0, -1), Vector(0, 1),
+                            Vector(1, -1), Vector(1, 0), Vector(1, 1)]
+        neighbors = [pos + offset for offset in neighbor_offsets if self.in_bounds(pos + offset)]
+        return neighbors
+
+    def __getitem__(self, pos: Vector) -> chr:
+        if not self.in_bounds(pos):
+            raise IndexError("Position out of range")
+        return self.board[pos.values[1]][pos.values[0]]
+
+    def __setitem__(self, key: Vector, value: str) -> None:
+        if not self.in_bounds(key):
+            raise IndexError("Position out of range")
+        assert len(value) == 1, "must be of length 1"
+        self.board[key.values[1]][key.values[0]] = value
+
+    def __contains__(self, target: str):
+        target_frequency = Words.get_frequency(target)
+        for letter in target_frequency:
+            if letter not in self.letter_frequency or target_frequency[letter] > self.letter_frequency[letter]:
+                return False
+        for row in range(len(self.board)):
+            for col in range(len(self.board[row])):
+                pos = Vector(col, row)
+                if self.checker_helper(target, pos):
+                    return True
+        return False
+
+    def checker_helper(self, target: str, pos: Vector, used: Set[Vector] = None) -> bool:
+        if used is None:
+            used = set()
+        if len(target) < 1:
+            return False
+        if pos in used:
+            return False
+        if self[pos] != target[0]:
+            return False
+        if len(target) == 1:
+            return True
+        used = used.union({pos})
+        neighbors = self.find_neighbors(pos)
+        for neighbor in neighbors:
+            if self.checker_helper(target[1:], neighbor, used):
+                return True
+        return False
+
+    def __str__(self):
+        out = ""
+        for i in self.board:
+            out += (" ".join(i) + "\n")
+        return out
+
+    def get_score(self):
+        total_score = 0
+        word_count = 0
+        used_words = []
+        letter_frequency = dict()
+        for index, word in enumerate(Words.words):
+            # if len(word) < 3:
+            #     pass
+            if word in self:
+                total_score += word_score(word)
+                word_count += 1
+                used_words.append(word)
+
+        for word in used_words:
+            for letter in word:
+                if letter in letter_frequency:
+                    letter_frequency[letter] += 1
+                else:
+                    letter_frequency[letter] = 1
+
+        return total_score, word_count, letter_frequency
+
+    def copy(self):
+        return BoggleBoard(self.board, self.generation)
+
+    def mutate(self):
+        rand = Random()
+        new_board = self.copy()
+        for i in range(8):
+            pos = Vector(rand.randrange(0, self.dimensions.values[0]), rand.randrange(0, self.dimensions.values[1]))
+            new_board[pos] = rand.choices(Words.alphabet, weights=list(Words.letter_frequencies.values()), k=1)[0]
+        return new_board
+
+    @staticmethod
+    def create_child(parent1, parent2, letter_frequency):
+        assert parent1[0].dimensions == parent2[0].dimensions, "Parent dimensions must match"
+        p1 = parent1[0].copy()
+        p2 = parent2[0].copy()
+        child = parent1[0].copy()
+
+        for row in range(len(p1.board)):
+            for col in range(len(p1.board[row])):
+                pos = Vector(col, row)
+                # if p1[pos] in letter_frequency and p2[pos] in letter_frequency:
+                #     if letter_frequency[p1[pos]] >= letter_frequency[p2[pos]]:
+                #         child[pos] = p1[pos]
+                #     else:
+                #         child[pos] = p2[pos]
+                # else:
+                #     if parent1[1][0]/parent1[1][1] > parent2[1][0]/parent2[1][1]:
+                #         child[pos] = p1[pos]
+                #     else:
+                #         child[pos] = p2[pos]
+                if Words.letter_frequencies[p1[pos]] > Words.letter_frequencies[p2[pos]]:
+                    child[pos] = p1[pos]
+                else:
+                    child[pos] = p2[pos]
+        child.generation += 1
+        return child.mutate()

@@ -1,0 +1,73 @@
+11.189018964767456 - {<boggle.BoggleBoard object at 0x0000027997B19B50>: (556, 439, {'a': 312, 'b': 113, 'e': 275, 'm': 70, 'd': 60, 't': 249, 'l': 56, 'r': 126, 'i': 144, 's': 148, 'c': 49, 'o': 66}), <boggle.BoggleBoard object at 0x0000027997B19C10>: (530, 374, {'a': 169, 'e': 238, 'o': 128, 'l': 187, 'i': 104, 'n': 129, 'r': 103, 't': 130, 'g': 76, 'p': 125, 'u': 20, 'x': 5}), <boggle.BoggleBoard object at 0x0000027997AFFE80>: (403, 382, {'a': 126, 'l': 126, 's': 224, 'm': 149, 'i': 257, 'r': 88, 'e': 77, 'o': 26, 'd': 98, 't': 65, 'w': 42, 'k': 50, 'n': 12}), <boggle.BoggleBoard object at 0x0000027997B19D90>: (351, 295, {'a': 103, 'd': 122, 'e': 137, 't': 126, 'i': 174, 'u': 35, 's': 240, 'c': 38, 'b': 43, 'o': 43}), <boggle.BoggleBoard object at 0x0000027995C71A00>: (244, 263, {'a': 155, 'd': 132, 'n': 33, 'r': 60, 'e': 116, 't': 58, 'o': 65, 's': 69, 'h': 46, 'i': 67, 'k': 68}), <boggle.BoggleBoard object at 0x0000027997B19A00>: (224, 246, {'a': 41, 'e': 47, 'r': 100, 'f': 44, 'i': 61, 'd': 63, 'o': 202, 's': 77, 'u': 29, 'x': 28, 'm': 66, 'p': 41}), <boggle.BoggleBoard object at 0x0000027997B19CD0>: (213, 208, {'a': 54, 'o': 78, 'r': 179, 'c': 36, 's': 82, 'k': 48, 'e': 102, 'n': 37, 't': 92, 'l': 7}), <boggle.BoggleBoard object at 0x0000027997B196D0>: (197, 228, {'b': 40, 'd': 96, 's': 98, 'i': 37, 't': 36, 'n': 133, 'u': 49, 'o': 124, 'e': 45, 'l': 41, 'y': 28}), <boggle.BoggleBoard object at 0x0000027997B195B0>: (160, 175, {'a': 113, 'i': 34, 'n': 118, 'r': 74, 'l': 34, 'e': 67, 's': 45, 'p': 44, 'w': 31, 'h': 3, 'j': 4}), <boggle.BoggleBoard object at 0x0000027997B196A0>: (76, 120, {'a': 88, 'm': 46, 'd': 56, 'c': 13, 'n': 10, 'r': 37, 't': 53, 'u': 13, 'f': 13, 'v': 6})}
+6.255997657775879 - {<boggle.BoggleBoard object at 0x0000027997B64C70>: (66, 105, {'a': 12, 'i': 39, 's': 73, 'e': 57, 'o': 43, 'r': 49, 'p': 22}), <boggle.BoggleBoard object at 0x0000027997B2D880>: (49, 79, {'a': 35, 'e': 43, 'o': 33, 'n': 22, 's': 46, 'i': 37}), <boggle.BoggleBoard object at 0x0000027997B64B80>: (41, 63, {'a': 12, 'i': 31, 's': 73, 'e': 43, 'o': 20}), <boggle.BoggleBoard object at 0x0000027997B647C0>: (31, 63, {'a': 15, 'c': 14, 'e': 38, 'n': 31, 'o': 29, 's': 20, 'i': 12}), <boggle.BoggleBoard object at 0x0000027997B64520>: (23, 49, {'a': 8, 'e': 29, 'o': 27, 'n': 26, 's': 20, 'i': 11}), <boggle.BoggleBoard object at 0x0000027997B645E0>: (11, 30, {'a': 7, 'e': 24, 'o': 13, 'n': 14, 'i': 10}), <boggle.BoggleBoard object at 0x0000027997B2DEB0>: (9, 24, {'a': 12, 'e': 17, 't': 17, 'i': 6}), <boggle.BoggleBoard object at 0x0000027997B2DEE0>: (6, 22, {'a': 3, 'e': 21, 'n': 10, 'o': 4, 'i': 7}), <boggle.BoggleBoard object at 0x0000027997B64F40>: (6, 22, {'a': 3, 'e': 21, 'n': 10, 'o': 4, 'i': 7}), <boggle.BoggleBoard object at 0x0000027997B2D4C0>: (1, 12, {'a': 2, 'e': 11, 'o': 4, 'i': 4})}
+6.52003288269043 - {<boggle.BoggleBoard object at 0x0000027997B64EE0>: (110, 132, {'e': 114, 's': 99, 'l': 75, 'y': 37, 'i': 49, 'r': 22, 't': 20}), <boggle.BoggleBoard object at 0x0000027997B64460>: (24, 49, {'e': 35, 's': 40, 'o': 21, 'i': 12, 't': 15}), <boggle.BoggleBoard object at 0x0000027997B2DB20>: (22, 41, {'a': 14, 'e': 38, 's': 32, 'i': 16, 'o': 5}), <boggle.BoggleBoard object at 0x0000027997B64580>: (17, 32, {'e': 28, 's': 26, 'i': 17, 'r': 11}), <boggle.BoggleBoard object at 0x0000027997B64430>: (17, 32, {'e': 28, 's': 26, 'i': 17, 'r': 11}), <boggle.BoggleBoard object at 0x0000027997B64160>: (14, 33, {'a': 4, 'e': 22, 'u': 15, 'n': 16, 's': 7, 'r': 16}), <boggle.BoggleBoard object at 0x0000027997B64310>: (10, 20, {'a': 2, 'e': 29, 'r': 10, 's': 9}), <boggle.BoggleBoard object at 0x0000027997B643D0>: (10, 20, {'a': 2, 'e': 28, 'n': 10, 's': 10}), <boggle.BoggleBoard object at 0x0000027997B64CA0>: (10, 20, {'a': 2, 'e': 29, 'r': 10, 's': 9}), <boggle.BoggleBoard object at 0x0000027997B2D520>: (9, 29, {'e': 22, 's': 19, 'o': 12, 'i': 9})}
+6.547019958496094 - {<boggle.BoggleBoard object at 0x0000027997B64130>: (34, 49, {'a': 24, 's': 54, 'e': 43, 'i': 20}), <boggle.BoggleBoard object at 0x0000027997B645E0>: (19, 38, {'a': 21, 'e': 28, 'o': 14, 'n': 26, 'i': 4}), <boggle.BoggleBoard object at 0x0000027997B64E20>: (16, 34, {'a': 7, 'e': 29, 'o': 13, 'l': 22, 'i': 12}), <boggle.BoggleBoard object at 0x0000027997B64940>: (16, 34, {'a': 7, 'e': 29, 'o': 13, 'l': 22, 'i': 12}), <boggle.BoggleBoard object at 0x0000027997B2D820>: (16, 34, {'a': 7, 'e': 29, 'o': 13, 'l': 22, 'i': 12}), <boggle.BoggleBoard object at 0x0000027997B2D190>: (11, 27, {'e': 24, 'l': 17, 'i': 10, 'o': 10}), <boggle.BoggleBoard object at 0x0000027997B649A0>: (11, 27, {'e': 24, 'l': 17, 'i': 10, 'o': 10}), <boggle.BoggleBoard object at 0x0000027997B64790>: (11, 24, {'a': 15, 'e': 21, 'n': 16, 'i': 4}), <boggle.BoggleBoard object at 0x0000027997B56CA0>: (1, 8, {'a': 2, 'e': 9, 'i': 4}), <boggle.BoggleBoard object at 0x0000027997B642E0>: (1, 12, {'a': 2, 'e': 11, 'o': 4, 'i': 4})}
+6.1650002002716064 - {<boggle.BoggleBoard object at 0x0000027997B7CA90>: (41, 60, {'a': 29, 'e': 34, 't': 40, 'i': 36, 'n': 29}), <boggle.BoggleBoard object at 0x0000027997B649A0>: (31, 52, {'a': 27, 's': 33, 'e': 33, 'i': 31, 'n': 16}), <boggle.BoggleBoard object at 0x0000027997B2D670>: (21, 45, {'a': 16, 'c': 19, 'e': 34, 'i': 19, 't': 16, 'n': 5}), <boggle.BoggleBoard object at 0x0000027997B64A00>: (14, 39, {'a': 15, 'c': 16, 'e': 21, 't': 13, 'i': 17, 'n': 5}), <boggle.BoggleBoard object at 0x0000027997B2D790>: (9, 29, {'a': 11, 'c': 14, 'e': 20, 'i': 13, 'n': 5}), <boggle.BoggleBoard object at 0x0000027997B641C0>: (8, 26, {'a': 8, 'e': 20, 't': 11, 'i': 11, 'n': 5}), <boggle.BoggleBoard object at 0x0000027997B7C3D0>: (8, 26, {'a': 8, 'e': 20, 't': 11, 'i': 11, 'n': 5}), <boggle.BoggleBoard object at 0x0000027997B64D30>: (8, 26, {'a': 8, 'e': 20, 't': 11, 'i': 11, 'n': 5}), <boggle.BoggleBoard object at 0x0000027997B2DFA0>: (5, 20, {'a': 7, 'e': 11, 'i': 15, 'n': 9}), <boggle.BoggleBoard object at 0x0000027997B64B50>: (3, 15, {'a': 5, 'e': 13, 'i': 7, 'n': 5})}
+6.5259997844696045 - {<boggle.BoggleBoard object at 0x0000027997B64310>: (128, 146, {'a': 73, 'e': 96, 's': 72, 't': 73, 'i': 27, 'p': 79, 'u': 51}), <boggle.BoggleBoard object at 0x0000027997B7C880>: (76, 104, {'a': 45, 'c': 27, 'e': 72, 't': 46, 's': 58, 'i': 25, 'u': 33}), <boggle.BoggleBoard object at 0x0000027997B64340>: (61, 83, {'c': 46, 's': 60, 'f': 15, 'o': 46, 'i': 29, 't': 32}), <boggle.BoggleBoard object at 0x0000027997B646A0>: (59, 98, {'c': 58, 's': 64, 'f': 20, 'o': 49, 'i': 32, 't': 32, 'u': 11}), <boggle.BoggleBoard object at 0x0000027997B7CD30>: (46, 74, {'a': 30, 'e': 51, 's': 43, 't': 35, 'i': 16, 'u': 28}), <boggle.BoggleBoard object at 0x0000027997B64C40>: (28, 60, {'c': 37, 's': 35, 'o': 32, 'i': 19, 't': 25}), <boggle.BoggleBoard object at 0x0000027997B64040>: (21, 41, {'a': 20, 'e': 34, 's': 18, 't': 21, 'i': 10}), <boggle.BoggleBoard object at 0x0000027997B64DC0>: (9, 28, {'c': 16, 's': 21, 'i': 13, 't': 10}), <boggle.BoggleBoard object at 0x0000027997B64F40>: (8, 28, {'i': 11, 's': 20, 'o': 16, 't': 11}), <boggle.BoggleBoard object at 0x0000027997B64B50>: (1, 10, {'i': 4, 'o': 6, 't': 5})}
+7.690996885299683 - {<boggle.BoggleBoard object at 0x0000027997B64E20>: (352, 269, {'e': 154, 's': 258, 'l': 100, 'i': 181, 'n': 127, 'o': 49, 't': 86, 'u': 64}), <boggle.BoggleBoard object at 0x0000027997B64130>: (206, 179, {'c': 54, 's': 133, 'i': 131, 'e': 70, 'n': 116, 'l': 47, 'u': 56, 'o': 23}), <boggle.BoggleBoard object at 0x0000027997B64460>: (170, 160, {'e': 81, 's': 158, 'n': 75, 't': 65, 'u': 47, 'i': 100, 'o': 23}), <boggle.BoggleBoard object at 0x0000027997B64520>: (96, 114, {'c': 43, 's': 72, 'i': 63, 'e': 30, 'n': 76, 'u': 45, 'o': 23}), <boggle.BoggleBoard object at 0x0000027997B641C0>: (86, 86, {'e': 44, 's': 111, 't': 44, 'u': 31, 'i': 57}), <boggle.BoggleBoard object at 0x0000027997B64D30>: (71, 85, {'e': 40, 's': 90, 't': 42, 'u': 27, 'i': 57, 'o': 5}), <boggle.BoggleBoard object at 0x0000027997B64F70>: (68, 79, {'e': 39, 's': 90, 't': 42, 'u': 27, 'i': 50}), <boggle.BoggleBoard object at 0x0000027997B642E0>: (42, 72, {'e': 27, 's': 42, 'n': 41, 'u': 22, 'i': 42, 'o': 18}), <boggle.BoggleBoard object at 0x0000027997B64D60>: (37, 71, {'c': 33, 's': 57, 'i': 40, 'e': 14, 't': 13, 'u': 14, 'o': 10}), <boggle.BoggleBoard object at 0x0000027997B640D0>: (14, 41, {'c': 18, 'i': 19, 'e': 10, 'n': 20, 't': 5, 'u': 14, 'o': 5})}
+7.3160083293914795 - {<boggle.BoggleBoard object at 0x0000027997B2DD30>: (132, 116, {'d': 58, 'e': 98, 'm': 64, 'o': 105, 'r': 91}), <boggle.BoggleBoard object at 0x0000027997B2DCA0>: (83, 97, {'e': 97, 'r': 60, 's': 46, 'm': 58, 'o': 49}), <boggle.BoggleBoard object at 0x0000027997B2D550>: (38, 68, {'a': 36, 'e': 41, 'r': 30, 't': 40, 'i': 14, 'o': 13}), <boggle.BoggleBoard object at 0x0000027997B64940>: (31, 56, {'e': 27, 'r': 15, 'o': 16, 'n': 23, 't': 39, 'i': 23}), <boggle.BoggleBoard object at 0x0000027997B64B50>: (28, 55, {'e': 17, 'o': 17, 'n': 30, 't': 33, 'u': 19, 'i': 22}), <boggle.BoggleBoard object at 0x0000027997B64F40>: (23, 42, {'e': 40, 'r': 26, 's': 25, 'o': 17}), <boggle.BoggleBoard object at 0x0000027997B64EE0>: (23, 42, {'e': 41, 'r': 27, 's': 25, 'o': 16}), <boggle.BoggleBoard object at 0x0000027997B64820>: (23, 42, {'e': 41, 'r': 27, 's': 25, 'o': 16}), <boggle.BoggleBoard object at 0x0000027997B64A30>: (22, 50, {'e': 24, 'r': 14, 'o': 15, 'n': 20, 't': 27, 'i': 18}), <boggle.BoggleBoard object at 0x0000027997B64640>: (4, 16, {'e': 14, 's': 13, 'o': 5})}
+6.562000513076782 - {<boggle.BoggleBoard object at 0x0000027997B7E940>: (398, 298, {'a': 144, 'd': 144, 'e': 249, 'n': 107, 's': 192, 't': 143, 'i': 167}), <boggle.BoggleBoard object at 0x0000027997B7E280>: (162, 154, {'a': 79, 'e': 126, 's': 114, 't': 83, 'i': 76, 'n': 56}), <boggle.BoggleBoard object at 0x0000027997B7E640>: (63, 78, {'a': 46, 'e': 78, 's': 51, 't': 44, 'n': 22}), <boggle.BoggleBoard object at 0x0000027997B7E8B0>: (42, 56, {'a': 22, 'i': 30, 'n': 30, 't': 42, 'e': 40}), <boggle.BoggleBoard object at 0x0000027997B7E4C0>: (37, 63, {'a': 27, 'e': 50, 't': 27, 'i': 24, 'n': 30, 'p': 7}), <boggle.BoggleBoard object at 0x0000027997B7EF10>: (34, 56, {'a': 27, 'e': 44, 't': 27, 'i': 24, 'n': 27}), <boggle.BoggleBoard object at 0x0000027997B7EB80>: (20, 35, {'a': 20, 'e': 37, 's': 20, 'n': 16}), <boggle.BoggleBoard object at 0x0000027997B7EC40>: (17, 41, {'e': 30, 'n': 20, 'o': 8, 't': 23, 'i': 15}), <boggle.BoggleBoard object at 0x0000027997B7E0A0>: (9, 24, {'a': 6, 'i': 12, 'n': 11, 'e': 20, 'o': 5}), <boggle.BoggleBoard object at 0x0000027997B7E5B0>: (8, 22, {'e': 23, 'n': 10, 'l': 10, 'o': 5})}
+7.66700005531311 - {<boggle.BoggleBoard object at 0x0000027997B7EE80>: (101, 108, {'a': 96, 'i': 46, 'l': 42, 't': 91, 'm': 41, 'e': 18, 'o': 20}), <boggle.BoggleBoard object at 0x0000027997B64B50>: (90, 115, {'a': 47, 'e': 109, 'r': 69, 'o': 31, 't': 29, 'n': 39, 's': 30}), <boggle.BoggleBoard object at 0x0000027997B647F0>: (87, 99, {'a': 58, 'i': 68, 'l': 26, 's': 45, 't': 91, 'e': 31}), <boggle.BoggleBoard object at 0x0000027997B7E790>: (77, 93, {'a': 40, 'i': 64, 's': 47, 't': 91, 'e': 28, 'o': 20}), <boggle.BoggleBoard object at 0x0000027997B7E9A0>: (46, 61, {'a': 43, 'i': 32, 't': 61, 'm': 21, 'e': 17, 'f': 8}), <boggle.BoggleBoard object at 0x0000027997B64B20>: (28, 48, {'a': 30, 'm': 20, 't': 35, 'e': 16, 's': 17, 'o': 9}), <boggle.BoggleBoard object at 0x0000027997B7E550>: (14, 34, {'a': 15, 'i': 21, 't': 22, 'e': 7, 'o': 12}), <boggle.BoggleBoard object at 0x0000027997B64BB0>: (10, 31, {'a': 10, 'i': 20, 'l': 10, 's': 12, 'e': 8, 'o': 6}), <boggle.BoggleBoard object at 0x0000027997B7EF40>: (7, 22, {'a': 10, 'i': 15, 't': 15, 'e': 7}), <boggle.BoggleBoard object at 0x0000027997B64AF0>: (0, 7, {'e': 4, 's': 4, 'o': 2})}
+
+
+72.43907523155212
+-------------------------------
+i t i h
+o e r e
+t i i u
+e e n d
+
+-------------------------------
+i t i h
+o e r e
+t i i u
+e e n d
+
+-------------------------------
+i t i h
+o e r e
+t i i u
+e e n d
+
+-------------------------------
+i i t r
+e e r u
+i e n o
+r o i t
+
+-------------------------------
+i t i h
+o e r e
+t i i u
+e e n d
+
+-------------------------------
+i t i h
+o e r e
+t i i u
+e e n d
+
+-------------------------------
+i t i h
+o e r e
+t i i u
+e e n d
+
+-------------------------------
+i t i h
+o e r e
+t i i u
+e e n d
+
+-------------------------------
+i t i h
+o e r e
+t i i u
+e e n d
+
+-------------------------------
+i i t r
+e e r u
+i e n o
+r o i t
+
